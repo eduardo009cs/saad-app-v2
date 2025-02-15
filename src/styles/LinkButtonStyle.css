@@ -1,0 +1,32 @@
+/* From Uiverse.io by kamehame-ha */ 
+.link-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 15px;
+    background-color: #007ACC;
+    box-shadow: 0 0 0 3px #007ACC;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 400ms;
+  }
+  
+  .link-button .link-text {
+    color: white;
+    font-weight: 700;
+    font-size: 1.5em;
+
+  }
+  .link-button:hover {
+    background-color: transparent;
+  }
+  
+  .link-button:hover .link-text {
+    color: #007ACC;
+  }
+  
+  .link-button:hover svg path {
+    fill: #007ACC;
+  }

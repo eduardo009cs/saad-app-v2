@@ -1,0 +1,47 @@
+.home-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    
+}
+
+.home-information {
+    flex: 0 0 auto; /* No crece ni se encoge, mantiene su tamaño */
+    max-width: 40%; /* Ajusta esto según el ancho que quieras */
+    white-space: normal;
+    word-wrap: break-word;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.home-information h1{
+    font-size: 3em;
+    margin-bottom: 50px;
+}
+.home-information p{
+    text-align: justify;
+    font-size: 1.3em;
+}
+
+.home-buttons{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px ;
+}
+
+.home-buttons div{
+    margin-bottom: 20px;
+}
+.home-image {
+    flex-grow: 1; /* La imagen crece para ocupar el espacio restante */
+    display: flex;
+    align-items: center; /* Centra la imagen verticalmente */
+    justify-content: center;
+}
+
+.home-image img {
+    max-width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+}
