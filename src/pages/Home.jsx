@@ -16,7 +16,7 @@ const Home = () => {
                         <LinkButton to={"https://github.com/eduardo009cs/saad-api"} text={`API`} icon={<SettingFilled/>}></LinkButton>
                     </div>
                     <div>
-                        <LinkButton to={"https://github.com/eduardo009cs/saad-app"} text={`APP`} icon={<ScheduleFilled />}></LinkButton>
+                        <LinkButton to={"https://github.com/eduardo009cs/saad-app-v2"} text={`APP`} icon={<ScheduleFilled />}></LinkButton>
                     </div>
                 </div>
                 

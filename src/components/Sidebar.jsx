@@ -10,8 +10,23 @@ const items = [
     {key: "2", label: <LinkSidebar to={"/generate-number"} text="Generar Número" />, icon:<AppstoreAddOutlined />},
     {key: "3", label: <LinkSidebar to={"/savings-table"} text="Tabla de Ahorros" />, icon:<DollarOutlined />},
     {key: "4", label: <LinkSidebar to={"/numbers-table"} text="Tabla de Números" />, icon:<NumberOutlined />},
-    {key: "6", label: <LinkSidebar to={"/statistic"} text="Estadisticas" />, icon:<ReconciliationOutlined/>},
+    {key: "5", label: <LinkSidebar to={"/statistics"} text="Estadisticas" />, icon:<ReconciliationOutlined/>},
 ]
+
+const getSelectedKeys = () => {
+    switch(location.pathname){
+        case "/":
+            return ["1"];
+        case "/generate-number":
+            return ["2"];
+        case "/savings-table":
+            return ["3"];
+        case "/numbers-table":
+            return ["4"];
+        case "/statistics":
+            return ["5"];
+    }
+}
 
 const Sidebar = () => {
     return (
@@ -21,7 +36,7 @@ const Sidebar = () => {
                     <img src={Logo} alt="Logo SAAD" />
                 </div>
             </div>
-            <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]} items={items} >
+            <Menu theme="dark" mode="inline" defaultSelectedKeys={getSelectedKeys()} items={items} >
             </Menu>
         </Sider>
     )
