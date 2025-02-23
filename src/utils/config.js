@@ -2,7 +2,7 @@ export const config = {
     apiUrl: "http://localhost:5000/api/v1",
     groupsNumber: 7,
     numberPerGroup: 52,
-    colors_headers:{
+    colorsHeaders:{
         1: "#741B47",
         2: "#351C75",
         3: "#0B5394",
@@ -11,7 +11,7 @@ export const config = {
         6: "#38761D",
         7: "#BF9000",
     },
-    colors_cells:{
+    colorsCells:{
         1: "#C27BA0",
         2: "#8E7CC3",
         3: "#6FA8DC",

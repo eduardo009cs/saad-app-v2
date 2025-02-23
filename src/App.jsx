@@ -8,6 +8,8 @@ import { getAllSavingHistory } from "./services/savingHistoryService";
 import { getAllUsers } from "./services/userService";
 import { getNumberGenerated } from "./utils/numbers";
 import SavingsTable from "./pages/SavingsTable";
+import NumberTable from "./pages/NumberTable";
+import Statistics from "./pages/Statistics";
 
 const { Header, Content } = Layout;
 
@@ -51,7 +53,9 @@ const SidebarLayout = () => {
                     <Routes>
                         <Route path="/" element={<Home/>}  ></Route>
                         <Route path="/generate-number" element={<GenerateNumber savings={savings} users={users} reloadData={loadData} numbersGenerated={numberGenerated} />}></Route>
-                        <Route path="/savings-table" element={<SavingsTable savings={savings} users={users} reloadData={loadData} numbersGenerated={numberGenerated} />}></Route>
+                        <Route path="/savings-table" element={<SavingsTable savings={savings} users={users} reloadData={loadData}/>}></Route>
+                        <Route path="/numbers-table" element={<NumberTable  numbersGenerated={numberGenerated} />}></Route>
+                        <Route path="/statistics" element={<Statistics  savings={savings} users={users} numbersGenerated={numberGenerated} />}></Route>
                     </Routes>
                 </Content>
             </Layout>
