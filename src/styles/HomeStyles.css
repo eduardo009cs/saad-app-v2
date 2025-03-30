@@ -45,3 +45,13 @@
     max-width: 100%;
     height: auto; /* Mantiene la proporción de la imagen */
 }
+
+
+@media (max-width:800px) {
+    .home-image{
+        display: none;
+    }
+    .home-information{
+        max-width: 100%;
+    }
+}

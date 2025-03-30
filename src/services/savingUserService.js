@@ -2,7 +2,7 @@ import axios from "axios";
 import { config } from "../utils/config";
 
 export const addNewSavingUser = async (savingId,users) => {
-    const apiUrl = config.apiUrl;
+    const apiUrl = import.meta.env.VITE_API_URL;
     let params = []
     try {
         for(let user of users){
@@ -41,7 +41,7 @@ export const addNewSavingUser = async (savingId,users) => {
 }
 
 export const updateSavingUser = async (savingUserId) => {
-    const apiUrl = config.apiUrl;
+    const apiUrl = import.meta.env.VITE_API_URL;
     try {
         const params = {
             status: true
@@ -49,7 +49,8 @@ export const updateSavingUser = async (savingUserId) => {
         const response = await axios({
             method:"PUT",
             url:`${apiUrl}/savingUsers/${savingUserId}`,
-            data:params
+            data:params,
+            
         })
         const type = response.data.type;
         const message = response.data.message;

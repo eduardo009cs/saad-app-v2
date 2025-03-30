@@ -1,0 +1,21 @@
+.send-email{
+    border: none;
+    width: 60px;
+    height: 40px;
+    background-color: #007ACC;
+    border-radius: 10px;
+    cursor: pointer;
+    float: right;
+    margin: 10px;
+    outline: #007ACC;
+}
+.send-email:hover{
+    background-color: #2092dd;
+}
+.send-email:focus{
+    outline: none;
+}
+.send-email-icon{
+    display: block;
+    color: white;
+}

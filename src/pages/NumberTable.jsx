@@ -34,7 +34,9 @@ const NumberTable = ({numbersGenerated}) => {
     }
 
     return (
-        <Table columns={titlesTable} dataSource={generateNumberTable()}  />
+        <div className='table-responsive'>
+            <Table columns={titlesTable} dataSource={generateNumberTable()}  />
+        </div>
     )
 }
 

@@ -73,10 +73,10 @@ const SavingsTable = ({ savings, users, reloadData }) => {
 
     }
     return (
-        <>
+        <div className='table-responsive'>
             {contextHolder}
             <Table className="table-responsive" columns={titles} dataSource={data} />
-        </>
+        </div>
     );
 };
 

@@ -32,8 +32,8 @@ const Sidebar = () => {
     return (
         <Sider collapsible style={{ background: "#001529" }} breakpoint="lg" collapsedWidth="80">
             <div style={{ height: 64, textAlign: "center", margin: "16px 0" }}>
-                <div style={{ color: "white", fontSize: "18px", fontWeight: "bold" }}>
-                    <img src={Logo} alt="Logo SAAD" />
+                <div style={{ color: "white", fontSize: "25px", fontWeight: "bold" }}>
+                    <p style={{color:"white", paddingTop:"15px"}}>SAAD</p>
                 </div>
             </div>
             <Menu theme="dark" mode="inline" defaultSelectedKeys={getSelectedKeys()} items={items} >

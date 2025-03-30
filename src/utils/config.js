@@ -1,5 +1,4 @@
 export const config = {
-    apiUrl: "http://localhost:5000/api/v1",
     groupsNumber: 7,
     numberPerGroup: 52,
     colorsHeaders:{
@@ -29,5 +28,9 @@ export const config = {
         "Fri": 1,
         "Sat": 4,
         "Sun": 3
-    } 
+    } ,
+    months: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AGO", "SEP","OCT","NOV","DEC"],
+    numbersLabels: ["Faltantes", "Pagados", "Pendientes"],
+    borderColor: ["#1E3A8A","#4A044E","#166534","#7C2D12","#3B0764","#B45309","#0F766E","#86198F","#374151","#DC2626","#EA580C","#16A34A","#2563EB","#9333EA","#CA8A04","#FACC15","#7E22CE","#D97706","#059669","#525252","#DB2777","#C026D3","#0891B2","#F43F5E"],
+    backgroundColor : ["#BFDBFE","#FAE8FF","#BBF7D0","#FED7AA","#EDE9FE","#FDE68A","#99F6E4","#F5D0FE","#D1D5DB","#FECACA","#FED7AA","#86EFAC","#BFDBFE","#E9D5FF","#FEF08A","#FEF9C3","#E9D5FF","#FDE68A","#A7F3D0","#E5E7EB","#FBCFE8","#F5D0FE","#BFDBFE","#FECACA"],
 }

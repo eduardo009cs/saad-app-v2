@@ -1,3 +1,4 @@
+import { DateTime } from "luxon";
 import { config } from "./config"
 
 
@@ -30,4 +31,44 @@ export const getWaitingSavings = (savings) => {
         waitingSaving += getTotalAmount(saving.number,saving.savings_users.length);
     }
     return waitingSaving;
+}
+
+export const getAmountPerMonth = (savings) => {
+    let months = new Array(12).fill(0,0)
+    
+    for (const saving of savings) {
+        const index = DateTime.fromISO(saving.date.split("T")[0]).setLocale('es').month;
+        months[index - 1] += getTotalAmount(saving.number,saving.savings_users.length); 
+    }
+    return months;
+}
+
+export const getMissingAmountPerUser = (savings) => {
+    const missingAmountPerUser = {}
+    for(const saving of savings){
+        for(const savingUsers of saving.savings_users){
+            if(!missingAmountPerUser[savingUsers.users.name]){
+                missingAmountPerUser[savingUsers.users.name] = 0;
+            } 
+            
+            missingAmountPerUser[savingUsers.users.name] += savingUsers.status ? 0 : getIndividualAmount(saving.number,saving.savings_users.length);
+
+        }
+    }
+    return missingAmountPerUser;
+
+}
+
+export const getUnpaidMissingNumbers = (savings) => {
+    let unpaidMissingNumbers = 0;
+    for (const saving of savings) {
+        let status = true;
+        for (const savingUsers of saving.savings_users) {
+            status = status && !savingUsers.status
+        }
+        if (status) {
+            unpaidMissingNumbers ++;
+        }
+    }
+    return unpaidMissingNumbers
 }

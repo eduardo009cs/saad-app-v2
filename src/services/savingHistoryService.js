@@ -1,5 +1,4 @@
 import axios from "axios";
-import { config } from "../utils/config";
 
 export const getAllSavingHistory = async () => {
     try {
@@ -14,7 +13,7 @@ export const getAllSavingHistory = async () => {
 }
 
 export const addNewSavingHistory = async (params) => {
-    const apiUrl = config.apiUrl;
+    const apiUrl = import.meta.env.VITE_API_URL;
     try {
         const response = await axios({
             method:"POST",
@@ -47,7 +46,7 @@ export const addNewSavingHistory = async (params) => {
 
 
 export const deleteSaving = async (savingHistoryId) => {
-    const apiUrl = config.apiUrl;
+    const apiUrl = import.meta.env.VITE_API_URL;
     try {
         const response = await axios({
             method:"DELETE",
