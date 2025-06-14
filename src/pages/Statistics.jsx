@@ -21,7 +21,7 @@ const Statistics = ({savings}) => {
     const datasetForGraph = getDatasetForGraph(amountPerMonth);
     
     for (const key in pendingAmountPerUsers) {
-        const amount = parseInt(pendingAmountPerUsers[key]).toLocaleString('es-MX',{style:"currency", currency:"MXN"})
+        const amount = parseFloat(pendingAmountPerUsers[key]).toLocaleString('es-MX',{style:"currency", currency:"MXN"})
         displayPendingAmountPerUsers.push(
             <Grid2 size={{xs:12,sm:6,lg:3}} key={key} >
                 <CardInfo title={`Faltante de ${key}`} text={`${amount}`} />
