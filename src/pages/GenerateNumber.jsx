@@ -24,7 +24,7 @@ const GenerateNumber = ({reloadData,savings,users,numbersGenerated}) => {
         let msDelay = 50;
         if(date != ""){
             while(!stop){
-                num = getNewNumber();
+                num = getNewNumber(date);
                 playSound()
                 setNumber(num);
                 await delay(msDelay);
