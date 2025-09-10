@@ -8,8 +8,6 @@ export const sendEmailNotification = async (params) => {
             url: `${url}/sendMessage`,
             data:params
         })
-        console.log(response)
-        
         return {message:response.data.message, type:response.data.type}
     }catch(error){
         console.log(error)
