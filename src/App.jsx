@@ -55,7 +55,6 @@ const SidebarLayout = () => {
             totalSaving: totalSavings
         }
         const messageResponse = await sendEmailNotification(params);
-        console.log(messageResponse)
         messageApi.open({
             key,
             type: messageResponse.type,
