@@ -33,12 +33,16 @@ export const getNumberGenerated = (savings) => {
     }
 }
 
-export const getNewNumber = () => {
-    return Math.floor(Math.random()*365) + 1
+export const getNewNumber = (date) => {
+    const day = DateTime.fromISO(date).toFormat("ccc")
+    const days = config.days;
+    const numberPerGroup = config.numberPerGroup;
+    const lowerNumber = numberPerGroup * (days[day] - 1) + 1
+    const highestNumber = numberPerGroup * (days[day])
+    return Math.floor(Math.random()*(highestNumber - lowerNumber + 1)) + lowerNumber;
 }
 
 export const validateNumber = (number, numbersGenerated, date, attempt) => {
-    console.log(number, numbersGenerated, date, attempt)
     const days = config.days;
     const numberPerGroup = config.numberPerGroup;
     const day = DateTime.fromISO(date).toFormat("ccc")
